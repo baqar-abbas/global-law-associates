@@ -20,7 +20,8 @@
 
 /* Logo */
 .nav-logo img {
-  height: 50px;
+  height: 70px;
+  width: 180px;
 }
 
 /* Nav Links */
@@ -50,6 +51,17 @@
 
 .cta-btn:hover {
   background: #c4971c;
+}
+
+/* Active Link */
+.nav-links a.active {
+  color: #daa520; /* gold */
+  font-weight: 600;
+  border-bottom: 2px solid #daa520; /* underline effect on Active Link*/
+}
+
+.nav-links .cta-btn.active {
+  background: #c4971c; /* darker gold for active */
 }
 
 /* Mobile Styles */
