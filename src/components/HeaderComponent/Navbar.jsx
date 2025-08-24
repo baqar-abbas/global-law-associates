@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const closeMenu = () => setIsOpen(false);
 
   return (
     <header className="navbar">
@@ -27,14 +30,24 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <nav className={`nav-links ${isOpen ? "open" : ""}`}>
-          <a href="#home">Home</a>
-          <a href="#about">About Us</a>
-          <a href="#services">Services</a>
-          <a href="#team">Our Team</a>
-          <a href="#insights">Insights</a>
-          <a href="#contact" className="cta-btn">
+          <NavLink to="/" onClick={closeMenu}>
+            Home
+          </NavLink>
+          <NavLink to="/about" onClick={closeMenu}>
+            About Us
+          </NavLink>
+          <NavLink to="/services" onClick={closeMenu}>
+            Services
+          </NavLink>
+          <NavLink to="/team" onClick={closeMenu}>
+            Our Team
+          </NavLink>
+          <NavLink to="/insights" onClick={closeMenu}>
+            Insights
+          </NavLink>
+          <NavLink to="/contact" className="cta-btn" onClick={closeMenu}>
             Contact Us
-          </a>
+          </NavLink>
         </nav>
       </div>
     </header>
