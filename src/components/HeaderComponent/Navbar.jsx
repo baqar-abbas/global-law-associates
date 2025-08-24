@@ -30,22 +30,48 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <nav className={`nav-links ${isOpen ? "open" : ""}`}>
-          <NavLink to="/" onClick={closeMenu}>
+          <NavLink
+            to="/"
+            onClick={closeMenu}
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
             Home
           </NavLink>
-          <NavLink to="/about" onClick={closeMenu}>
+          <NavLink
+            to="/about"
+            onClick={closeMenu}
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
             About Us
           </NavLink>
-          <NavLink to="/services" onClick={closeMenu}>
+          <NavLink
+            to="/services"
+            onClick={closeMenu}
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
             Services
           </NavLink>
-          <NavLink to="/team" onClick={closeMenu}>
+          <NavLink
+            to="/team"
+            onClick={closeMenu}
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
             Our Team
           </NavLink>
-          <NavLink to="/insights" onClick={closeMenu}>
+          <NavLink
+            to="/insights"
+            onClick={closeMenu}
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
             Insights
           </NavLink>
-          <NavLink to="/contact" className="cta-btn" onClick={closeMenu}>
+          <NavLink
+            to="/contact"
+            onClick={closeMenu}
+            className={({ isActive }) =>
+              isActive ? "cta-btn active" : "cta-btn"
+            }
+          >
             Contact Us
           </NavLink>
         </nav>
