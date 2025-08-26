@@ -5,9 +5,10 @@ import {
   FileText,
   Building,
   Globe,
-  ShieldCheck,
+  PenTool,
 } from "lucide-react";
 import "./ServicesOverview.css";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -21,9 +22,9 @@ const services = [
     description: "Private Ltd, SMC, AOP, and Sole Proprietorship setups.",
   },
   {
-    icon: <ShieldCheck size={36} />,
-    title: "Trademark & IP Protection",
-    description: "Safeguard your brand identity and intellectual property.",
+    icon: <PenTool size={36} />,
+    title: "Legal Drafting & Contracts",
+    description: "Drafting agreements, MoUs, and corporate contracts.",
   },
   {
     icon: <Briefcase size={36} />,
@@ -42,11 +43,60 @@ const services = [
   },
 ];
 
+// Animation Variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
 const ServicesOverview = () => {
   return (
-    <div>
-      <h2>Services Overview Section</h2>
-    </div>
+    <section className="services">
+      <div className="services-container">
+        <h2 className="services-title">Our Legal Services</h2>
+        <p className="services-subtitle">
+          Comprehensive solutions tailored to your business needs.
+        </p>
+
+        {/* Animated Service Grid */}
+        <motion.div
+          className="services-grid"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          {services.map((service, index) => (
+            <motion.div
+              className="service-card"
+              key={index}
+              variants={cardVariants}
+              whileHover={{ y: -8, boxShadow: "0 8px 24px rgba(0,0,0,0.15)" }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            >
+              <div className="service-icon">{service.icon}</div>
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Service Button */}
+        <div className="services-btn">
+          <button className="btn-primary">View All Services</button>
+        </div>
+      </div>
+    </section>
   );
 };
 

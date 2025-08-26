@@ -1,0 +1,80 @@
+/* Services Overview Section styling */
+.services {
+  padding: 4rem 1.5rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services-title {
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  color: #002147;
+  margin-bottom: 0.5rem;
+}
+
+.services-subtitle {
+  font-size: 1.1rem;
+  font-family: "Inter", sans-serif;
+  color: #555;
+  margin-bottom: 3rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  color: #daa520;
+  margin-bottom: 1rem;
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-family: "Playfair Display", serif;
+  color: #002147;
+}
+
+.service-card p {
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  color: #555;
+}
+
+.services-btn {
+  margin-top: 3rem;
+}
+
+.btn-primary {
+  background: #daa520;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background: #c4971c;
+}
