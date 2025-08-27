@@ -56,6 +56,14 @@ const FeaturedServices = () => {
             compliant legal solutions.
           </p>
           <button className="btn-primary">Explore Services</button>
+
+          {/* Illustration */}
+          <img
+            src="/images/law-illustration.avif"
+            alt="Law Illustration"
+            className="featured-illustration"
+            loading="lazy"
+          />
         </div>
 
         {/* Right Services List */}
