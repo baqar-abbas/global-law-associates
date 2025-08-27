@@ -31,11 +31,57 @@ const featured = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.2 },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -40 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+};
+
 const FeaturedServices = () => {
   return (
-    <div>
-      <h2>Featured Services Section</h2>
-    </div>
+    <section className="featured-services">
+      <div className="featured-container">
+        {/* Left Content */}
+        <div className="featured-left">
+          <h2 className="featured-title">Featured Legal Services</h2>
+          <p className="featured-subtitle">
+            Trusted by businesses across Pakistan for reliable, timely, and
+            compliant legal solutions.
+          </p>
+          <button className="btn-primary">Explore Services</button>
+        </div>
+
+        {/* Right Services List */}
+        <motion.div
+          className="featured-right"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          {featured.map((item, index) => (
+            <motion.div
+              className="featured-item"
+              key={index}
+              variants={itemVariants}
+            >
+              <div className="featured-icon">{item.icon}</div>
+              <div>
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
   );
 };
 
