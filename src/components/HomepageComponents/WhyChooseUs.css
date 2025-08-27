@@ -1,0 +1,56 @@
+/* Styling for Why choose us section */
+.why-choose {
+  padding: 5rem 1rem;
+  background: linear-gradient(135deg, #001f3f, #003366);
+  color: white;
+  text-align: center;
+}
+
+.why-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.why-title {
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 0.5rem;
+}
+
+.why-subtitle {
+  font-size: 1.1rem;
+  font-family: "Inter", sans-serif;
+  color: #ddd;
+  margin-bottom: 3rem;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.why-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  backdrop-filter: blur(4px);
+}
+
+.why-icon {
+  color: #daa520;
+  margin-bottom: 1rem;
+}
+
+.why-card h3 {
+  font-size: 1.3rem;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 0.5rem;
+}
+
+.why-card p {
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  color: #eee;
+}
