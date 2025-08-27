@@ -30,11 +30,54 @@ const features = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opcaity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.2 },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    transition: { duration: 0.5 },
+  },
+};
+
 const WhyChooseUs = () => {
   return (
-    <div>
-      <h2>Why Choose Us Section</h2>
-    </div>
+    <section className="why-choose">
+      <div className="why-container">
+        <h2 className="why-title">Why Choose Us</h2>
+        <p className="why-subtitle">
+          Trusted by Clients across Pakistan for reliable legal solutions.
+        </p>
+
+        <motion.div
+          className="why-grid"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          {features.map((feature, index) => (
+            <motion.div
+              className="why-card"
+              key={index}
+              variants={cardVariants}
+              whileHover={{ y: -8, boxShadow: "0 8px 24px rgba(0,0,0,0.2)" }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            >
+              <div className="why-icon">{feature.icon}</div>
+              <h3>{feature.title}</h3>
+              <p>{feature.description}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
   );
 };
 
