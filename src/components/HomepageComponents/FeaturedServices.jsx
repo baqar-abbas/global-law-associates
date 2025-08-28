@@ -52,8 +52,8 @@ const FeaturedServices = () => {
         <div className="featured-left">
           <h2 className="featured-title">Featured Legal Services</h2>
           <p className="featured-subtitle">
-            Trusted by businesses across Pakistan for reliable, timely, and
-            compliant legal solutions.
+            Trusted by clients and businesses across Pakistan for reliable,
+            timely, and compliant legal solutions.
           </p>
           <button className="btn-primary">Explore Services</button>
 
