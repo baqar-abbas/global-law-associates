@@ -24,6 +24,7 @@
   gap: 1.5rem;
   flex: 1;
   justify-content: center;
+  transition: transform 0.6s ease-in-out; /* smooth slide effect */
 }
 
 .testimonial-card {

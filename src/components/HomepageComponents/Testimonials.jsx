@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import "./Testimonials.css";
 
@@ -57,6 +57,15 @@ const Testimonials = () => {
     setCurrent((prev) =>
       prev >= testimonials.length - visibleCount ? 0 : prev + 1
     );
+
+  // Autoplay every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextTestimonial();
+    }, 5000);
+
+    return () => clearInterval(interval); // cleanup on unmount
+  }, []);
 
   const visibleTestimonials = testimonials.slice(
     current,
