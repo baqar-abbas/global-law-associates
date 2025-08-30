@@ -4,6 +4,7 @@ import ServicesOverview from "../components/HomepageComponents/ServicesOverview"
 import WhyChooseUs from "../components/HomepageComponents/WhyChooseUs";
 import FeaturedServices from "../components/HomepageComponents/FeaturedServices";
 import Testimonials from "../components/HomepageComponents/Testimonials";
+import CallToAction from "../components/HomepageComponents/CallToAction";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <WhyChooseUs />
       <FeaturedServices />
       <Testimonials />
+      <CallToAction />
     </section>
   );
 };
