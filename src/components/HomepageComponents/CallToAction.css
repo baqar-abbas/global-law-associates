@@ -1,0 +1,73 @@
+/* Styling rules for the CallToAction component */
+.cta {
+  padding: 5rem 1rem;
+  background: #f9f9f9;
+  text-align: center;
+  color: #002147; /* navy text */
+}
+
+.cta-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 1rem;
+  color: #002147; /* strong navy for heading */
+}
+
+.cta-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #444; /* dark gray text for readability */
+  font-family: "Inter", sans-serif;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary-cta {
+  background: #ffd700;
+  color: #002147;
+  border: none;
+  padding: 0.9rem 1.6rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-cta:hover {
+  background: #e6c200;
+}
+
+.btn-outline-cta {
+  background: transparent;
+  color: #002147;
+  border: 2px solid #002147;
+  padding: 0.9rem 1.6rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-cta:hover {
+  background: rgba(0, 33, 71, 0.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-title {
+    font-size: 1.6rem;
+  }
+  .cta-subtitle {
+    font-size: 1rem;
+  }
+}
