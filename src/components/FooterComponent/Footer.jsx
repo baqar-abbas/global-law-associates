@@ -22,6 +22,15 @@ const Footer = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
+  const quickLinks = [
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "Team", path: "/team" },
+    { name: "Insights", path: "/insights" },
+    { name: "Contact", path: "/contact" },
+  ];
+
   return (
     <motion.footer
       className="footer"
@@ -35,18 +44,9 @@ const Footer = () => {
         <motion.div className="footer-col" variants={itemVariants}>
           <h3 className="footer-title">Quick Links</h3>
           <ul>
-            {[
-              "Home",
-              "About Us",
-              "Services",
-              "Team",
-              "Insights",
-              "Contact",
-            ].map((link, i) => (
+            {quickLinks.map((link, i) => (
               <motion.li key={i} variants={itemVariants}>
-                <Link to={`/${link.toLowerCase().replace(" ", "")}`}>
-                  {link}
-                </Link>
+                <Link to={link.path}>{link.name}</Link>
               </motion.li>
             ))}
           </ul>
