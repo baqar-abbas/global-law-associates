@@ -78,45 +78,12 @@
   color: #aaa;
 }
 
-/* Tooltip for Developer Info */
-.dev-tooltip {
-  position: relative;
-  cursor: pointer;
-  color: #ffd700;
+.footer-bottom span {
   font-weight: 600;
-  display: inline-block;
+  color: #ffd700;
+  cursor: pointer;
 }
 
-.tooltip-text {
-  visibility: hidden;
-  max-width: 220px; /* prevent overflow */
-  background: #002147;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 6px 10px;
-  position: absolute;
-  bottom: 125%;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 0.3s;
-  white-space: normal; /* allow wrapping */
-  word-wrap: break-word;
-  font-size: 0.8rem;
-  z-index: 10; /* ensure above */
-}
-
-.dev-tooltip:hover .tooltip-text {
-  visibility: visible;
-  opacity: 1;
-}
-
-/* Global safeguard */
-html,
-body {
-  overflow-x: hidden;
-}
 /* Responsive */
 @media (max-width: 768px) {
   .footer-bottom {

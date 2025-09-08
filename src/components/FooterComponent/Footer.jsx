@@ -2,6 +2,8 @@ import React from "react";
 import { Facebook, Linkedin, Twitter, Instagram } from "lucide-react";
 import "./Footer.css";
 import { Link } from "react-router-dom";
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css"; // Import tooltip style
 
 const Footer = () => {
   return (
@@ -98,14 +100,27 @@ const Footer = () => {
         </p>
         <p>
           Developed by{" "}
-          <span className="dev-tooltip">
+          <span
+            data-tooltip-id="dev-tooltip"
+            data-tooltip-content="Baqar Abbas – Frontend Developer | React & UI Specialist"
+            style={{ color: "#ffd700", fontWeight: "600", cursor: "pointer" }}
+          >
             Baqar Abbas
-            <span className="tooltip-text">
-              Frontend Developer | React & UI Specialist
-            </span>
           </span>
         </p>
       </div>
+
+      {/* Tooltip Component */}
+      <Tooltip
+        id="dev-tooltip"
+        place="top"
+        effect="solid"
+        style={{
+          backgroundColor: "#002147",
+          color: "#fff",
+          fontSize: "0.85rem",
+        }}
+      />
     </footer>
   );
 };
