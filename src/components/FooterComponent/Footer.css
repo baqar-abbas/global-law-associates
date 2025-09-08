@@ -1,0 +1,7 @@
+/* Styling rules for the Footer */
+.footer {
+  background: #f7f9fc;
+  color: #333;
+  padding: 4rem 1.5rem 2rem;
+  border-top: 4px solid #daa520;
+}
