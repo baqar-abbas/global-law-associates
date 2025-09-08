@@ -1,63 +1,77 @@
 import React from "react";
 import { Facebook, Linkedin, Twitter, Instagram } from "lucide-react";
-import "./Footer.css";
 import { Link } from "react-router-dom";
 import { Tooltip } from "react-tooltip";
-import "react-tooltip/dist/react-tooltip.css"; // Import tooltip style
+import { motion } from "framer-motion";
+import "react-tooltip/dist/react-tooltip.css";
+import "./Footer.css";
 
 const Footer = () => {
+  // Variants for animation
+  const containerVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { staggerChildren: 0.2, duration: 0.6 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   return (
-    <footer className="footer">
-      <div className="footer-container">
+    <motion.footer
+      className="footer"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={containerVariants}
+    >
+      <motion.div className="footer-container" variants={containerVariants}>
         {/* Column 1 - Quick Links */}
-        <div className="footer-col">
+        <motion.div className="footer-col" variants={itemVariants}>
           <h3 className="footer-title">Quick Links</h3>
           <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About Us</Link>
-            </li>
-            <li>
-              <Link to="/services">Services</Link>
-            </li>
-            <li>
-              <Link to="/team">Team</Link>
-            </li>
-            <li>
-              <Link to="/insights">Insights</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
+            {[
+              "Home",
+              "About Us",
+              "Services",
+              "Team",
+              "Insights",
+              "Contact",
+            ].map((link, i) => (
+              <motion.li key={i} variants={itemVariants}>
+                <Link to={`/${link.toLowerCase().replace(" ", "")}`}>
+                  {link}
+                </Link>
+              </motion.li>
+            ))}
           </ul>
-        </div>
+        </motion.div>
 
         {/* Column 2 - Services */}
-        <div className="footer-col">
+        <motion.div className="footer-col" variants={itemVariants}>
           <h3 className="footer-title">Our Services</h3>
           <ul>
-            <li>
-              <Link to="/services">Tax & Corporate</Link>
-            </li>
-            <li>
-              <Link to="/services">Litigation & Civil</Link>
-            </li>
-            <li>
-              <Link to="/services">Business Setup</Link>
-            </li>
-            <li>
-              <Link to="/services">Import Export License</Link>
-            </li>
-            <li>
-              <Link to="/services">Tax Return Filing</Link>
-            </li>
+            {[
+              "Tax & Corporate",
+              "Litigation & Civil",
+              "Business Setup",
+              "Import Export License",
+              "Tax Return Filing",
+            ].map((service, i) => (
+              <motion.li key={i} variants={itemVariants}>
+                <Link to="/services">{service}</Link>
+              </motion.li>
+            ))}
           </ul>
-        </div>
+        </motion.div>
 
         {/* Column 3 - Office Info */}
-        <div className="footer-col">
+        <motion.div className="footer-col" variants={itemVariants}>
           <h3 className="footer-title">Office</h3>
           <p>
             📍 Office #123, Shadman Town,
@@ -70,30 +84,42 @@ const Footer = () => {
             ✉️{" "}
             <a href="mailto:info@globallaw.com">info@globallawassociates.com</a>
           </p>
-        </div>
+        </motion.div>
 
         {/* Column 4 - Social */}
-        <div className="footer-col">
+        <motion.div className="footer-col" variants={itemVariants}>
           <h3 className="footer-title">Follow Us</h3>
-          <div className="footer-social">
-            <a href="#" target="_blank" rel="noreferrer">
-              <Facebook size={20} />
-            </a>
-            <a href="#" target="_blank" rel="noreferrer">
-              <Linkedin size={20} />
-            </a>
-            <a href="#" target="_blank" rel="noreferrer">
-              <Twitter size={20} />
-            </a>
-            <a href="#" target="_blank" rel="noreferrer">
-              <Instagram size={20} />
-            </a>
-          </div>
-        </div>
-      </div>
+          <motion.div
+            className="footer-social"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={containerVariants}
+          >
+            {[
+              { icon: <Facebook size={20} />, link: "#" },
+              { icon: <Linkedin size={20} />, link: "#" },
+              { icon: <Twitter size={20} />, link: "#" },
+              { icon: <Instagram size={20} />, link: "#" },
+            ].map((social, i) => (
+              <motion.a
+                key={i}
+                href={social.link}
+                target="_blank"
+                rel="noreferrer"
+                variants={itemVariants}
+                whileHover={{ scale: 1.2, rotate: 5 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {social.icon}
+              </motion.a>
+            ))}
+          </motion.div>
+        </motion.div>
+      </motion.div>
 
       {/* Bottom Bar */}
-      <div className="footer-bottom">
+      <motion.div className="footer-bottom" variants={itemVariants}>
         <p>
           © {new Date().getFullYear()} Global Law Associates. All rights
           reserved.
@@ -102,13 +128,13 @@ const Footer = () => {
           Developed by{" "}
           <span
             data-tooltip-id="dev-tooltip"
-            data-tooltip-content="Baqar Abbas – Frontend Developer | React & UI Specialist"
+            data-tooltip-content="Baqar Abbas – Frontend Developer | React Specialist"
             style={{ color: "#ffd700", fontWeight: "600", cursor: "pointer" }}
           >
             Baqar Abbas
           </span>
         </p>
-      </div>
+      </motion.div>
 
       {/* Tooltip Component */}
       <Tooltip
@@ -121,7 +147,7 @@ const Footer = () => {
           fontSize: "0.85rem",
         }}
       />
-    </footer>
+    </motion.footer>
   );
 };
 
