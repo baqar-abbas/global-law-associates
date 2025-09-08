@@ -10,10 +10,12 @@ import Services from "./pages/Services";
 import Team from "./pages/Team";
 import Insights from "./pages/Insights";
 import Contact from "./pages/Contact";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
