@@ -1,0 +1,56 @@
+.mission-vision {
+  background: #f9f9f9; /* light background */
+  padding: 4rem 2rem;
+}
+
+.mission-vision-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.mv-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  border-top: 4px solid #ffd700;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.mv-card:hover {
+  transform: translateY(-8px);
+}
+
+.mv-icon {
+  color: #002b5c;
+  margin-bottom: 1rem;
+}
+
+.mv-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #daa520;
+  font-family: "Playfair Display", serif;
+}
+
+.mv-text {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: "Inter", sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mv-title {
+    font-size: 1.3rem;
+  }
+  .mv-text {
+    font-size: 0.95rem;
+  }
+}

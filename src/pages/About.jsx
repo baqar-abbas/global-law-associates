@@ -1,11 +1,12 @@
 import React from "react";
 import AboutHero from "../components/AboutpageComponents/AboutHero";
+import MissionVision from "../components/AboutpageComponents/MissionVision";
 
 const About = () => {
   return (
     <section>
       <AboutHero />
-      <h1>About Page</h1>
+      <MissionVision />
     </section>
   );
 };
