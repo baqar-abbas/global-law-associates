@@ -15,7 +15,7 @@
   background: #fff;
   padding: 2rem;
   border-radius: 8px;
-  border-top: 4px solid #ffd700;
+  border-top: 4px solid #daa520; /* gold accent */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   text-align: center;
   transition: transform 0.3s ease;

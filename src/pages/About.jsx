@@ -2,6 +2,8 @@ import React from "react";
 import AboutHero from "../components/AboutpageComponents/AboutHero";
 import MissionVision from "../components/AboutpageComponents/MissionVision";
 import WhoWeAre from "../components/AboutpageComponents/WhoWeAre";
+import WhyChooseUs from "../components/HomepageComponents/WhyChooseUs";
+import ServicesOverview from "../components/HomepageComponents/ServicesOverview";
 
 const About = () => {
   return (
@@ -9,6 +11,8 @@ const About = () => {
       <AboutHero />
       <MissionVision />
       <WhoWeAre />
+      <WhyChooseUs />
+      <ServicesOverview />
     </section>
   );
 };
