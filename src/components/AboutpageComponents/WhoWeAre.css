@@ -1,0 +1,60 @@
+.who-we-are {
+  padding: 4rem 1.5rem;
+  background: #fff;
+}
+
+.who-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.who-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.who-title {
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  color: #002147;
+  margin-bottom: 1rem;
+}
+
+.who-description {
+  font-size: 1.05rem;
+  font-family: "Inter", sans-serif;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+  background: #daa520;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #c4971c;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .who-title {
+    font-size: 1.6rem;
+  }
+  .who-description {
+    font-size: 1rem;
+  }
+}
