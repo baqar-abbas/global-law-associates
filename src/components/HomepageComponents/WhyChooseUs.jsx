@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types"; // Import PropTypes
 import { ShieldCheck, Users, Award, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 import "./WhyChooseUs.css";
@@ -46,14 +47,12 @@ const cardVariants = {
   },
 };
 
-const WhyChooseUs = () => {
+const WhyChooseUs = ({ title, subtitle }) => {
   return (
     <section className="why-choose">
       <div className="why-container">
-        <h2 className="why-title">Why Choose Us</h2>
-        <p className="why-subtitle">
-          Trusted by Clients across Pakistan for reliable legal solutions.
-        </p>
+        <h2 className="why-title">{title}</h2>
+        <p className="why-subtitle">{subtitle}</p>
 
         <motion.div
           className="why-grid"
@@ -79,6 +78,12 @@ const WhyChooseUs = () => {
       </div>
     </section>
   );
+};
+
+// Define PropTypes
+WhyChooseUs.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
 };
 
 export default WhyChooseUs;
