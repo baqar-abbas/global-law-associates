@@ -11,7 +11,10 @@ const Home = () => {
     <section>
       <Hero />
       <ServicesOverview />
-      <WhyChooseUs />
+      <WhyChooseUs
+        title="Why Choose Us"
+        subtitle="Trusted by Clients across Pakistan for reliable legal solutions."
+      />
       <FeaturedServices />
       <Testimonials />
       <CallToAction />
