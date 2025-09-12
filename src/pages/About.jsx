@@ -15,7 +15,11 @@ const About = () => {
         title="Our Core Strengths"
         subtitle="What sets Global Law Associates apart in delivering excellence and trust."
       />
-      <ServicesOverview />
+      <ServicesOverview
+        title="Explore What We Offer"
+        subtitle="A wide range of legal solutions designed for businesses and individuals."
+        buttonText="Explore Services"
+      />
     </section>
   );
 };

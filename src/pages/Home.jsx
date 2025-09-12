@@ -10,7 +10,11 @@ const Home = () => {
   return (
     <section>
       <Hero />
-      <ServicesOverview />
+      <ServicesOverview
+        title="Our Legal Services"
+        subtitle="Comprehensive solutions tailored to your business needs."
+        buttonText="View All Services"
+      />
       <WhyChooseUs
         title="Why Choose Us"
         subtitle="Trusted by Clients across Pakistan for reliable legal solutions."
