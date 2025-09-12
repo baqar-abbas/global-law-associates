@@ -11,7 +11,10 @@ const About = () => {
       <AboutHero />
       <MissionVision />
       <WhoWeAre />
-      <WhyChooseUs />
+      <WhyChooseUs
+        title="Our Core Strengths"
+        subtitle="What sets Global Law Associates apart in delivering excellence and trust."
+      />
       <ServicesOverview />
     </section>
   );
