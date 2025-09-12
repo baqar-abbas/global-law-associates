@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {
   Scale,
   Briefcase,
@@ -59,14 +60,12 @@ const cardVariants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
-const ServicesOverview = () => {
+const ServicesOverview = ({ title, subtitle, buttonText }) => {
   return (
     <section className="services">
       <div className="services-container">
-        <h2 className="services-title">Our Legal Services</h2>
-        <p className="services-subtitle">
-          Comprehensive solutions tailored to your business needs.
-        </p>
+        <h2 className="services-title">{title}</h2>
+        <p className="services-subtitle">{subtitle}</p>
 
         {/* Animated Service Grid */}
         <motion.div
@@ -93,11 +92,18 @@ const ServicesOverview = () => {
 
         {/* Service Button */}
         <div className="services-btn">
-          <button className="btn-primary">View All Services</button>
+          <button className="btn-primary">{buttonText}</button>
         </div>
       </div>
     </section>
   );
+};
+
+// Define PropTypes
+ServicesOverview.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  buttonText: PropTypes.string.isRequired,
 };
 
 export default ServicesOverview;
