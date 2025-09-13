@@ -1,0 +1,83 @@
+.core-values {
+  background-color: #f9f9f9;
+  padding: 5rem 1.5rem;
+  color: #002147;
+}
+
+.core-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.core-heading h2 {
+  font-size: 2.2rem;
+  color: #002147;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 0.5rem;
+}
+
+.core-heading p {
+  font-size: 1.1rem;
+  font-family: "Inter", sans-serif;
+  color: #555;
+}
+
+/* Grid Layout */
+.values-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center; /* Centers odd card on last row */
+}
+
+.value-card {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 8px;
+  border-top: 4px solid #daa520;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 340px;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.value-icon {
+  color: #daa520;
+  margin-bottom: 1rem;
+}
+
+.value-title {
+  font-size: 1.3rem;
+  font-family: "Playfair Display", serif;
+  color: #002147;
+  margin-bottom: 0.5rem;
+}
+
+.value-desc {
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
