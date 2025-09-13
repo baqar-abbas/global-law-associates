@@ -41,6 +41,13 @@ const textVariants = {
 const LeaderProfile = () => {
   return (
     <section className="leader-profile">
+      <div className="leader-heading">
+        <h2 className="leader-title">Leadership & Legacy</h2>
+        <p className="leader-subtitle">
+          Guided by experience, driven by integrity.
+        </p>
+      </div>
+
       {leaderDetails.map((leader, index) => (
         <motion.div
           className="leader-container"

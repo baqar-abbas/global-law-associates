@@ -4,6 +4,24 @@
   padding: 4rem 1.5rem;
 }
 
+.leader-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.leader-title {
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  color: #ffd700;
+  margin-bottom: 0.5rem;
+}
+
+.leader-subtitle {
+  font-size: 1.1rem;
+  font-family: "Inter", sans-serif;
+  color: #ddd;
+}
+
 .leader-container {
   max-width: 1200px;
   margin: 0 auto;

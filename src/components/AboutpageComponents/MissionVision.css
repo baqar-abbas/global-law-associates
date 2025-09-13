@@ -3,6 +3,24 @@
   padding: 4rem 2rem;
 }
 
+.mv-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.mv-main-title {
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  color: #002147;
+  margin-bottom: 0.5rem;
+}
+
+.mv-subtitle {
+  font-size: 1.1rem;
+  font-family: "Inter", sans-serif;
+  color: #555;
+}
+
 .mission-vision-container {
   max-width: 1200px;
   margin: auto;

@@ -20,6 +20,13 @@ const MissionVision = () => {
 
   return (
     <section className="mission-vision">
+      <div className="mv-heading">
+        <h2 className="mv-main-title">Our Mission & Vision</h2>
+        <p className="mv-subtitle">
+          Defining our purpose and long-term direction.
+        </p>
+      </div>
+
       <motion.div
         className="mission-vision-container"
         initial="hidden"
