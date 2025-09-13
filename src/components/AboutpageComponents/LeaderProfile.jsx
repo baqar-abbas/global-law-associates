@@ -11,7 +11,7 @@ const leaderDetails = [
     description: `With three decades of experience in civil, corporate, and regulatory law, 
     Khuwaja Jamil Ahmed is more than just the founding partner of Global Law Associates — 
     he is the embodiment of integrity, wisdom, and tireless advocacy. 
-    Having handled landmark cases across Islamabad, Lahore, and beyond, 
+    Having handled landmark cases across Karachi, Lahore, Islamabad, and beyond, 
     he brings a depth of legal insight combined with a client-first approach. 
     Whether navigating complex litigation, contract disputes, or advisory roles, 
     his mission has always been the same: fairness, clarity, and results for clients.`,
