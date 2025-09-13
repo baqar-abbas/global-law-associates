@@ -1,0 +1,60 @@
+.leader-profile {
+  background: #001f3f; /* deep navy / dark */
+  color: #fff;
+  padding: 4rem 1.5rem;
+}
+
+.leader-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.leader-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+.leader-name {
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  color: #ffd700;
+  margin-bottom: 0.5rem;
+}
+
+.leader-role {
+  font-size: 1.3rem;
+  font-family: "Inter", sans-serif;
+  color: #eee;
+  margin-bottom: 1rem;
+}
+
+.leader-experience {
+  font-size: 1.1rem;
+  font-family: "Inter", sans-serif;
+  color: #ccc;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.leader-description {
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .leader-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .leader-image img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
