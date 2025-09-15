@@ -1,9 +1,10 @@
 import React from "react";
+import ServicesHero from "../components/ServicesPageComponents/ServicesHero";
 
 const Services = () => {
   return (
-    <section className="page">
-      <h1>Services Page</h1>
+    <section>
+      <ServicesHero />
     </section>
   );
 };
