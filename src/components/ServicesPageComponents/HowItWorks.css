@@ -1,0 +1,96 @@
+.how-it-works {
+  background: #002147; /* Dark navy background */
+  color: #fff;
+  padding: 5rem 1.5rem;
+}
+
+.how-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.how-header {
+  margin-bottom: 3rem;
+}
+
+.how-header h2 {
+  font-size: 2.2rem;
+  font-family: "Playfair Display", serif;
+  color: #daa520; /* Golden heading */
+  margin-bottom: 0.5rem;
+}
+
+.how-header p {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.how-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: left;
+  border-top: 3px solid #daa520;
+  transition: all 0.3s ease;
+}
+
+.step-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #daa520;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.how-card h3 {
+  font-size: 1.4rem;
+  font-family: "Playfair Display", serif;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.how-card p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* CTA Button */
+.how-btn {
+  text-align: center;
+}
+
+.btn-golden {
+  display: inline-block;
+  background: #daa520;
+  color: #002147;
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-golden:hover {
+  background: #c5961d;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .how-header h2 {
+    font-size: 1.8rem;
+  }
+  .how-card {
+    text-align: center;
+  }
+}
