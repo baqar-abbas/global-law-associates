@@ -107,7 +107,7 @@ const ServicesDetails = () => {
   return (
     <section id="services" className="services-details">
       <div className="services-details-container">
-        <div className="services-header">
+        <div className="services-details-header">
           <h2>Our Legal & Corporate Services</h2>
           <p>
             At <strong>Global Law Associates</strong>, we provide a complete
@@ -116,7 +116,7 @@ const ServicesDetails = () => {
           </p>
         </div>
         <motion.div
-          className="services-grid"
+          className="services-details-grid"
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
@@ -124,12 +124,12 @@ const ServicesDetails = () => {
         >
           {services.map((service, index) => (
             <motion.div
-              className="service-card"
+              className="services-details-card"
               key={index}
               variants={cardVariants}
               whileHover={{ y: -6, boxShadow: "0 8px 20px rgba(0,0,0,0.1)" }}
             >
-              <div className="service-icon">{service.icon}</div>
+              <div className="services-details-icon">{service.icon}</div>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
             </motion.div>
