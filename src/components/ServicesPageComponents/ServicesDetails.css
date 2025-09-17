@@ -1,88 +1,91 @@
-.services-details {
+.services-section {
   background: #fff;
   padding: 5rem 1.5rem;
   color: #002147;
 }
 
-.services-details-container {
+.services-container {
   max-width: 1200px;
   margin: auto;
 }
 
-.services-details-header {
+.services-header {
   text-align: center;
   margin-bottom: 3rem;
 }
 
-.services-details-header h2 {
+.services-header h2 {
   font-size: 2.2rem;
   font-family: "Playfair Display", serif;
   color: #002147;
   margin-bottom: 1rem;
 }
 
-.services-details-header p {
+.services-header p {
   font-size: 1.1rem;
   color: #555;
   font-family: "Inter", sans-serif;
   line-height: 1.6;
+  max-width: 700px;
+  margin: auto;
 }
 
-.services-details-grid {
+/* Grid Layout */
+.services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
-.services-details-card {
+/* Service Card */
+.services-card {
   background: #f9f9f9;
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 10px;
   border-top: 4px solid #daa520;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: all 0.3s ease;
 }
 
-.services-details-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+.services-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-.services-details-icon {
+.services-icon {
   color: #daa520;
   margin-bottom: 1rem;
 }
 
-.services-details-card h3 {
-  font-size: 1.3rem;
+.services-card h3 {
+  font-size: 1.25rem;
   font-family: "Playfair Display", serif;
   color: #002147;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.6rem;
 }
 
-.services-details-card p {
+.services-card p {
   font-size: 1rem;
   font-family: "Inter", sans-serif;
   color: #555;
   line-height: 1.6;
 }
 
-/* Responsive */
+/* Responsive Fixes */
 @media (max-width: 768px) {
-  .services-details-header h2 {
+  .services-header h2 {
     font-size: 1.8rem;
   }
-  .services-details-card h3 {
-    font-size: 1.2rem;
+  .services-card {
+    padding: 1.5rem;
   }
-  .services-details-card p {
-    font-size: 0.95rem;
+  .services-card h3 {
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .services-details-grid {
+  .services-grid {
     grid-template-columns: 1fr;
   }
 }
