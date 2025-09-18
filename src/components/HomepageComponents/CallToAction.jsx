@@ -1,6 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom"; // import Link
 import "./CallToAction.css";
+
+// wrap Link with motion
+const MotionLink = motion(Link);
 
 const CallToAction = () => {
   return (
@@ -42,7 +46,9 @@ const CallToAction = () => {
             },
           }}
         >
-          <motion.button
+          {/* Request Consultation */}
+          <MotionLink
+            to="/contact"
             className="btn-primary-cta"
             variants={{
               hidden: { opacity: 0, y: 20 },
@@ -57,9 +63,11 @@ const CallToAction = () => {
             whileTap={{ scale: 0.97 }}
           >
             Request Consultation
-          </motion.button>
+          </MotionLink>
 
-          <motion.button
+          {/* Contact Us */}
+          <MotionLink
+            to="/contact"
             className="btn-outline-cta"
             variants={{
               hidden: { opacity: 0, y: 20 },
@@ -74,7 +82,7 @@ const CallToAction = () => {
             whileTap={{ scale: 0.97 }}
           >
             Contact Us
-          </motion.button>
+          </MotionLink>
         </motion.div>
       </div>
     </section>

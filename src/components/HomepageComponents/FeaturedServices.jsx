@@ -1,6 +1,7 @@
 import React from "react";
 import { Scale, Briefcase, FileText, Building, Globe } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom"; //  import Link
 import "./FeaturedServices.css";
 
 const featured = [
@@ -55,7 +56,9 @@ const FeaturedServices = () => {
             Trusted by clients and businesses across Pakistan for reliable,
             timely, and compliant legal solutions.
           </p>
-          <button className="btn-primary">Explore Services</button>
+          <Link to="/services" className="btn-primary">
+            Explore Services
+          </Link>
 
           {/* Illustration */}
           <img
