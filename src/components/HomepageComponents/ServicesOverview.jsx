@@ -9,6 +9,7 @@ import {
   PenTool,
 } from "lucide-react";
 import "./ServicesOverview.css";
+import { Link } from "react-router-dom"; // import Link
 import { motion } from "framer-motion";
 
 const services = [
@@ -92,7 +93,9 @@ const ServicesOverview = ({ title, subtitle, buttonText }) => {
 
         {/* Service Button */}
         <div className="services-btn">
-          <button className="btn-primary">{buttonText}</button>
+          <Link to="/services" className="btn-primary">
+            {buttonText}
+          </Link>
         </div>
       </div>
     </section>

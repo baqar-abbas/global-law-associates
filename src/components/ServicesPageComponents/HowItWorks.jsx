@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom"; // import Link
 import "./HowItWorks.css";
 
 const steps = [
@@ -70,9 +71,9 @@ const HowItWorks = () => {
 
         {/* CTA Button */}
         <div className="how-btn">
-          <a href="/contact" className="btn-golden">
+          <Link to="/contact" className="btn-golden">
             Let’s Discuss
-          </a>
+          </Link>
         </div>
       </div>
     </section>

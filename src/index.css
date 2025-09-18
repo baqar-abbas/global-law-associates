@@ -14,3 +14,7 @@ body {
 .page {
   padding: 2rem;
 }
+
+.about-page {
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
