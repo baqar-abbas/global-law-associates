@@ -11,7 +11,7 @@ import CallToAction from "../components/HomepageComponents/CallToAction";
 
 const About = () => {
   return (
-    <section>
+    <section className="about-page">
       <AboutHero />
       <MissionVision />
       <WhoWeAre />
