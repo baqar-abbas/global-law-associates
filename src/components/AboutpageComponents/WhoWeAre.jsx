@@ -1,5 +1,6 @@
 import React from "react";
 import { motion, stagger } from "framer-motion";
+import { Link } from "react-router-dom"; // import Link
 import "./WhoWeAre.css";
 
 const WhoWeAre = () => {
@@ -41,7 +42,9 @@ const WhoWeAre = () => {
             your success, whether you're establishing a new venture, ensuring
             compliance, or managing disputes.
           </p>
-          <button className="btn-primary">Learn More</button>
+          <Link to="/services" className="btn-primary">
+            Learn More
+          </Link>
         </motion.div>
       </motion.div>
     </section>
