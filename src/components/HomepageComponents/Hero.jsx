@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom"; // import Link
 import "./Hero.css";
 
 // Custom Arrow Components
@@ -83,7 +84,9 @@ const Hero = () => {
                 transition={{ delay: 0.6 }}
               >
                 <button className="btn-primary">Book a Consultation</button>
-                <button className="btn-outline">Explore Services</button>
+                <Link to="/services" className="btn-outline">
+                  Explore Services
+                </Link>
               </motion.div>
             </div>
           </div>
