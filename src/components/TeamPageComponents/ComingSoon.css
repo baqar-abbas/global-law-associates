@@ -1,0 +1,63 @@
+.coming-soon {
+  background: #fff;
+  color: #002147;
+  padding: 5rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.coming-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cs-title {
+  font-size: 2.4rem;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 1rem;
+  color: #002147;
+}
+
+.cs-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-family: "Inter", sans-serif;
+  color: #555;
+}
+
+.cs-image-wrapper {
+  margin-bottom: 2rem;
+}
+
+.cs-image {
+  max-width: 100%;
+  height: auto;
+  opacity: 0.9;
+}
+
+/* Button wrapper */
+.cs-button .btn-primary {
+  background: #daa520;
+  color: white;
+  padding: 0.9rem 1.8rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.cs-button .btn-primary:hover {
+  background: #c4971c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cs-title {
+    font-size: 2rem;
+  }
+  .cs-subtitle {
+    font-size: 1rem;
+  }
+}
