@@ -1,9 +1,10 @@
 import React from "react";
+import TeamHero from "../components/TeamPageComponents/TeamHero";
 
 const Team = () => {
   return (
-    <section className="page">
-      <h1>Team Page</h1>
+    <section>
+      <TeamHero />
     </section>
   );
 };
