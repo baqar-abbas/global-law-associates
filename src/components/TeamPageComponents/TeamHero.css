@@ -89,7 +89,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .team-hero {
-    height: 70vh;
+    height: 75vh;
     padding: 1rem;
   }
 
