@@ -1,9 +1,12 @@
 import React from "react";
+import InsightsHero from "../components/InsightsPageComponents/InsightsHero";
+import InsightsArticles from "../components/InsightsPageComponents/InsightsArticles";
 
 const Insights = () => {
   return (
-    <section className="page">
-      <h1>Insights Page</h1>
+    <section>
+      <InsightsHero />
+      <InsightsArticles />
     </section>
   );
 };
