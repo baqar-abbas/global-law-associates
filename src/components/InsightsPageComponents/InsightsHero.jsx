@@ -38,9 +38,9 @@ const InsightsHero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
         >
-          <Link to="/insights" className="btn-primary">
+          <a href="#articles" className="btn-primary">
             View All Articles
-          </Link>
+          </a>
           <Link to="/contact" className="btn-outline">
             Contact Us
           </Link>
