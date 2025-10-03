@@ -53,6 +53,19 @@
   min-width: 320px;
 }
 
+/* Error Styles */
+.error {
+  border-color: #e63946 !important;
+  background: #fff5f5;
+}
+
+.error-text {
+  font-size: 0.85rem;
+  color: #e63946;
+  margin-top: 0.3rem;
+  display: block;
+}
+
 .form-group {
   margin-bottom: 1.5rem;
 }
