@@ -102,4 +102,8 @@
   .contact-form-container {
     flex-direction: column;
   }
+
+  .contact-form {
+    width: 100%;
+  }
 }
