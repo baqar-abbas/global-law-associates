@@ -1,8 +1,73 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./ContactForm.css";
 
 const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Handle input change
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    setErrors({ ...errors, [name]: "" }); // Clear error on change
+  };
+
+  // Validation logic
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.name.trim()) {
+      newErrors.name = "Full Name is required";
+    } else if (formData.name.length < 3) {
+      newErrors.name = "Full Name must be at least 3 characters";
+    }
+    if (!formData.email.trim()) {
+      newErrors.email = "Email Address is required";
+    } else if (!/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(formData.email)) {
+      newErrors.email = "Enter a valid email address.";
+    }
+    if (!formData.subject.trim()) {
+      newErrors.subject = "Subject is required";
+    } else if (formData.subject.length < 5) {
+      newErrors.subject = "Subject must be at least 5 characters";
+    }
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required";
+    } else if (formData.message.length < 5) {
+      newErrors.message = "Message must be at least 5 characters";
+    }
+    return newErrors;
+  };
+
+  // Handle form submit
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+    } else {
+      setIsSubmitting(true);
+      // Simulate form submission
+      console.log("Form submitted successfully:", formData);
+      setTimeout(() => {
+        setIsSubmitting(false);
+        alert("Your message has been sent!");
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      }, 1500);
+    }
+  };
   return (
     <section id="contact-form" className="contact-form-section">
       <div className="contact-form-container">
@@ -40,6 +105,7 @@ const ContactForm = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
+          onSubmit={handleSubmit}
         >
           <div className="form-group">
             <label htmlFor="name">Full Name</label>
@@ -48,17 +114,25 @@ const ContactForm = () => {
               id="name"
               name="name"
               placeholder="Your full name"
+              value={formData.name}
+              onChange={handleChange}
+              className={errors.name ? "error" : ""}
             />
+            {errors.name && <span className="error-text">{errors.name}</span>}
           </div>
 
           <div className="form-group">
             <label htmlFor="email">Email Address</label>
             <input
-              type="email"
+              type="text"
               id="email"
               name="email"
               placeholder="your@email.com"
+              value={formData.email}
+              onChange={handleChange}
+              className={errors.email ? "error" : ""}
             />
+            {errors.email && <span className="error-text">{errors.email}</span>}
           </div>
 
           <div className="form-group">
@@ -68,7 +142,13 @@ const ContactForm = () => {
               id="subject"
               name="subject"
               placeholder="Subject of your inquiry"
+              value={formData.subject}
+              onChange={handleChange}
+              className={errors.subject ? "error" : ""}
             />
+            {errors.subject && (
+              <span className="error-text">{errors.subject}</span>
+            )}
           </div>
 
           <div className="form-group">
@@ -78,7 +158,13 @@ const ContactForm = () => {
               name="message"
               placeholder="Type your message here..."
               rows="5"
+              value={formData.message}
+              onChange={handleChange}
+              className={errors.message ? "error" : ""}
             ></textarea>
+            {errors.message && (
+              <span className="error-text">{errors.message}</span>
+            )}
           </div>
 
           <motion.button
