@@ -1,9 +1,12 @@
 import React from "react";
+import ContactHero from "../components/ContactPageComponents/ContactHero";
+import ContactForm from "../components/ContactPageComponents/ContactForm";
 
 const Contact = () => {
   return (
-    <section className="page">
-      <h1>Contact Page</h1>
+    <section>
+      <ContactHero />
+      <ContactForm />
     </section>
   );
 };
